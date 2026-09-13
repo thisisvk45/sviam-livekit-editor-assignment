@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="572" viewBox="0 0 1040 572" role="img" aria-labelledby="title desc">
+  <title id="title">How the starter works</title>
+  <desc id="desc">The browser editor, local LiveKit server, and Node.js agent run on the candidate's laptop. LiveKit carries audio and code messages in both directions. For real voice, the agent uses team-funded Deepgram for speech to text, OpenAI for replies, and ElevenLabs for speech. No app deployment is needed.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#35634f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #22372d; }
+      .heading { font-size: 25px; font-weight: 700; }
+      .label { font-size: 16px; font-weight: 700; letter-spacing: 1px; }
+      .name { font-size: 23px; font-weight: 700; }
+      .body { font-size: 19px; }
+      .small { font-size: 17px; fill: #4a6255; }
+      .wire { fill: none; stroke: #35634f; stroke-width: 2; marker-start: url(#arrow); marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1040" height="572" rx="16" fill="#fff"/>
+  <text x="24" y="35" class="heading">The starter: code + conversation</text>
+  <rect x="24" y="60" width="992" height="274" rx="16" fill="#eff6f1" stroke="#c5d7ca"/>
+  <text x="48" y="94" class="label">ON YOUR LAPTOP</text>
+  <text x="992" y="94" class="small" text-anchor="end">No deployment needed</text>
+
+  <rect x="48" y="116" width="248" height="162" rx="12" fill="#fff" stroke="#c5d7ca"/>
+  <text x="172" y="152" class="name" text-anchor="middle">Your browser</text>
+  <text x="172" y="187" class="body" text-anchor="middle">Code editor</text>
+  <text x="172" y="214" class="body" text-anchor="middle">Microphone + speaker</text>
+  <text x="172" y="252" class="small" text-anchor="middle">Holds the current code</text>
+
+  <rect x="398" y="116" width="244" height="162" rx="12" fill="#fff" stroke="#c5d7ca"/>
+  <text x="520" y="152" class="name" text-anchor="middle">LiveKit server</text>
+  <text x="520" y="193" class="body" text-anchor="middle">Moves audio</text>
+  <text x="520" y="220" class="body" text-anchor="middle">and messages</text>
+  <text x="520" y="252" class="small" text-anchor="middle">Runs locally</text>
+
+  <rect x="744" y="116" width="248" height="162" rx="12" fill="#fff" stroke="#c5d7ca"/>
+  <text x="868" y="152" class="name" text-anchor="middle">Node.js agent</text>
+  <text x="868" y="187" class="body" text-anchor="middle">Reads this turn's code</text>
+  <text x="868" y="214" class="body" text-anchor="middle">and the user's words</text>
+  <text x="868" y="252" class="small" text-anchor="middle">Creates a reply</text>
+
+  <text x="347" y="179" class="small" text-anchor="middle">Audio</text>
+  <path d="M 306 194 H 388" class="wire"/>
+  <text x="347" y="228" class="small" text-anchor="middle">Code + text</text>
+  <path d="M 306 243 H 388" class="wire"/>
+  <text x="693" y="179" class="small" text-anchor="middle">Audio</text>
+  <path d="M 652 194 H 734" class="wire"/>
+  <text x="693" y="228" class="small" text-anchor="middle">Code + text</text>
+  <path d="M 652 243 H 734" class="wire"/>
+  <text x="48" y="311" class="small">Next.js + tRPC starts the session. The browser owns the editor state.</text>
+
+  <path d="M 868 283 V 385" class="wire"/>
+  <text x="48" y="369" class="body">Voice mode uses these online services.</text>
+  <text x="885" y="370" class="small">API keys</text>
+  <rect x="24" y="396" width="992" height="152" rx="16" fill="#fbf6eb" stroke="#e3d7be"/>
+  <text x="48" y="429" class="label">FUNDED ACCESS FROM THE HIRING TEAM</text>
+  <path d="M 348 450 V 524 M 684 450 V 524" stroke="#e3d7be"/>
+  <text x="48" y="470" class="name">Deepgram</text>
+  <text x="48" y="502" class="body">Speech → text</text>
+  <text x="380" y="470" class="name">OpenAI</text>
+  <text x="380" y="502" class="body">Text + code → reply</text>
+  <text x="716" y="470" class="name">ElevenLabs</text>
+  <text x="716" y="502" class="body">Reply → speech</text>
+</svg>

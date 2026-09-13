@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="236" viewBox="0 0 1040 236" role="img" aria-labelledby="title desc">
+  <title id="title">Your path to a submission</title>
+  <desc id="desc">Five steps: accept your private repository invitation, run the editor and agent locally, build highlighting, running code, and edit proposals, demo and check the features locally, then open a solution-to-main pull request and mark it ready for review.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#35634f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #22372d; }
+      .heading { font-size: 25px; font-weight: 700; }
+      .name { font-size: 19px; font-weight: 700; }
+      .body { font-size: 17px; fill: #4a6255; }
+      .number { font-size: 15px; font-weight: 700; fill: #fff; text-anchor: middle; }
+      .wire { stroke: #35634f; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1040" height="236" rx="16" fill="#fff"/>
+  <text x="24" y="35" class="heading">Your path to a submission</text>
+
+  <rect x="24" y="64" width="176" height="148" rx="12" fill="#eff6f1" stroke="#c5d7ca"/>
+  <circle cx="52" cy="93" r="14" fill="#35634f"/><text x="52" y="98" class="number">1</text>
+  <text x="40" y="133" class="name">Accept invite</text>
+  <text x="40" y="164" class="body">Your own private</text>
+  <text x="40" y="188" class="body">GitHub repository</text>
+
+  <rect x="228" y="64" width="176" height="148" rx="12" fill="#eff6f1" stroke="#c5d7ca"/>
+  <circle cx="256" cy="93" r="14" fill="#35634f"/><text x="256" y="98" class="number">2</text>
+  <text x="244" y="133" class="name">Run starter</text>
+  <text x="244" y="164" class="body">Editor + agent</text>
+  <text x="244" y="188" class="body">on your laptop</text>
+
+  <rect x="432" y="64" width="176" height="148" rx="12" fill="#eff6f1" stroke="#c5d7ca"/>
+  <circle cx="460" cy="93" r="14" fill="#35634f"/><text x="460" y="98" class="number">3</text>
+  <text x="448" y="133" class="name">Build features</text>
+  <text x="448" y="164" class="body">Highlight, run,</text>
+  <text x="448" y="188" class="body">propose edits</text>
+
+  <rect x="636" y="64" width="176" height="148" rx="12" fill="#eff6f1" stroke="#c5d7ca"/>
+  <circle cx="664" cy="93" r="14" fill="#35634f"/><text x="664" y="98" class="number">4</text>
+  <text x="652" y="133" class="name">Check locally</text>
+  <text x="652" y="164" class="body">Demo the features</text>
+  <text x="652" y="188" class="body">Explain edge cases</text>
+
+  <rect x="840" y="64" width="176" height="148" rx="12" fill="#fbf6eb" stroke="#e3d7be"/>
+  <circle cx="868" cy="93" r="14" fill="#35634f"/><text x="868" y="98" class="number">5</text>
+  <text x="856" y="133" class="name">Open a PR</text>
+  <text x="856" y="164" class="body">solution → main</text>
+  <text x="856" y="188" class="body">Ready for review</text>
+
+  <path d="M 206 140 H 222" class="wire"/>
+  <path d="M 410 140 H 426" class="wire"/>
+  <path d="M 614 140 H 630" class="wire"/>
+  <path d="M 818 140 H 834" class="wire"/>
+</svg>

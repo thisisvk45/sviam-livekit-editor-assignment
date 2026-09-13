@@ -1,26 +1,17 @@
-## Implementation
+## Demo
+How do we run and try highlighting, code execution, and suggested edits locally?
 
-Describe highlighting, execution, and code proposals. Include local demo steps.
+## Design
+Who owns the editor state? How do actions refer to the correct code version?
+Where does code run, and how are edits accepted or rejected?
 
-## Architecture
-
-Explain editor ownership, turn context, revision checks, message routing, execution
-isolation, and proposal acceptance/rejection. Include a diagram if useful.
-
-## Evidence
-
-List the checks you ran and their results. Distinguish mock transport checks from
-real voice/provider tests. Include failure and concurrent-edit cases.
-
-## Limits and tradeoffs
-
-What can still fail? What would you change with more time?
+## Checks and limits
+What did you test? Include code changes during a response, out-of-order runs,
+repeated actions, interruptions, and connection loss. Separate mock checks from
+real voice checks. What can still fail, and why?
 
 ## AI assistance
+What tools did you use, and how did you check their output?
 
-Which tools helped, and how did you verify their output? AI use is fully allowed.
-
-## Submission
-
-Mark this PR ready for review in your own private assignment repository.
-Keep main at the supplied starter. Do not merge your own submission.
+Mark this PR ready for review in your assigned private repo. Keep main unchanged;
+you do not need to merge the PR.

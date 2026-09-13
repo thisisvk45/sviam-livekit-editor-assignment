@@ -1,6 +1,6 @@
 # Assignment repository
 
-Read README.md and ASSIGNMENT.md before changing code. AI assistance is allowed.
+Read README.md before changing code; it is the complete candidate brief. AI assistance is allowed.
 Do not implement features outside the assignment or change the review criteria.
 Do not add credentials, personal data, or production source to commits.
 
