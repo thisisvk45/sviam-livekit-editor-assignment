@@ -45,7 +45,7 @@
   <path d="M 652 194 H 734" class="wire"/>
   <text x="693" y="228" class="small" text-anchor="middle">Code + text</text>
   <path d="M 652 243 H 734" class="wire"/>
-  <text x="48" y="311" class="small">Next.js + tRPC starts the session. The browser owns the editor state.</text>
+  <text x="48" y="311" class="small">You add: highlight code · run code · propose edits.</text>
 
   <path d="M 868 283 V 385" class="wire"/>
   <text x="48" y="369" class="body">Voice mode uses these online services.</text>
