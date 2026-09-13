@@ -1,70 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="408" viewBox="0 0 960 408" role="img" aria-labelledby="title desc">
-<title id="title">From starter to submission</title>
-<desc id="desc">Accept the invitation to your own private repository. Run the starter locally. Add highlighting, code runs, and edit proposals. Test and explain the features. Open a solution-to-main pull request and mark it ready for review. The result is a local demo and a reviewable pull request.</desc>
-<defs>
-  <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#173d2e" flood-opacity="0.055"/></filter>
-  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 2 8 5 2 8" fill="none" stroke="#43836a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
-  <style>
-    text { font-family: Arial, Helvetica, sans-serif; fill: #183e30; }
-    .title { font-size: 32px; font-weight: 700; letter-spacing: -0.6px; }
-    .subtitle { font-size: 20px; fill: #52675d; }
-    .eyebrow { font-size: 15px; font-weight: 700; letter-spacing: 1.4px; }
-    .name { font-size: 23px; font-weight: 700; letter-spacing: -0.3px; }
-    .body { font-size: 19px; fill: #3c574a; }
-    .small { font-size: 18px; fill: #52675d; }
-    .chip { font-size: 18px; font-weight: 700; }
-    .wire { fill: none; stroke: #43836a; stroke-width: 2; marker-start: url(#arrow); marker-end: url(#arrow); }
-  </style>
-</defs>
-<rect x="1" y="1" width="958" height="406" rx="22" fill="#ffffff" stroke="#e0e7e2" />
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="244" viewBox="0 0 960 244" role="img" aria-labelledby="title desc">
+  <title id="title">Your steps</title>
+  <desc id="desc">Accept your private repository invitation, run the starter locally, add the three features, demo and test them, then open a pull request ready for review. The work and demo run locally.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M2 2 8 5 2 8" fill="none" stroke="#737373" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #242424; }
+      .title { font-size: 28px; font-weight: 700; }
+      .note { font-size: 18px; fill: #5c5c5c; }
+      .number { font-size: 17px; fill: #737373; text-anchor: middle; }
+      .name { font-size: 18px; font-weight: 700; text-anchor: middle; }
+      .detail { font-size: 16px; fill: #5c5c5c; text-anchor: middle; }
+      .box { fill: #ffffff; stroke: #bdbdbd; stroke-width: 1; }
+      .line { fill: none; stroke: #737373; stroke-width: 1.5; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="960" height="244" fill="#ffffff"/>
+  <text x="32" y="43" class="title">Your steps</text>
+  <text x="928" y="42" class="note" text-anchor="end">Build locally · submit a PR</text>
 
-<text x="32" y="51" class="title" >From starter to submission</text>
-<text x="32" y="84" class="subtitle" >One private repository. Five clear steps.</text>
-<path d="M138 123H278" fill="none" stroke="#bfd3c6" stroke-width="2" marker-end="url(#arrow)"/>
-<path d="M322 123H462" fill="none" stroke="#bfd3c6" stroke-width="2" marker-end="url(#arrow)"/>
-<path d="M506 123H646" fill="none" stroke="#bfd3c6" stroke-width="2" marker-end="url(#arrow)"/>
-<path d="M690 123H830" fill="none" stroke="#bfd3c6" stroke-width="2" marker-end="url(#arrow)"/>
-<circle cx="116" cy="123" r="17" fill="#22644d"/>
-<text x="116" y="129" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#ffffff">1</text>
-<rect x="32" y="154" width="168" height="166" rx="14" fill="#ffffff" stroke="#dbe6df" filter="url(#shadow)"/>
-<rect x="48" y="170" width="44" height="44" rx="11" fill="#eef5f0" stroke="none" />
-<g transform="translate(53 175) scale(0.9)" fill="none" stroke="#22644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="30" height="23" rx="4"/><path d="m4 10 14 11 14-11"/></g>
-<text x="48" y="244" class="name" style="font-size:20px">Get your repo</text>
-<text x="48" y="275" class="small" >Accept your</text>
-<text x="48" y="300" class="small" >private invite.</text>
-<circle cx="300" cy="123" r="17" fill="#22644d"/>
-<text x="300" y="129" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#ffffff">2</text>
-<rect x="216" y="154" width="168" height="166" rx="14" fill="#ffffff" stroke="#dbe6df" filter="url(#shadow)"/>
-<rect x="232" y="170" width="44" height="44" rx="11" fill="#eef5f0" stroke="none" />
-<g transform="translate(237 175) scale(0.9)" fill="none" stroke="#22644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="24" height="22" rx="3"/><path d="M3 31h30M13 11l-4 4 4 4m8 0h5"/></g>
-<text x="232" y="244" class="name" style="font-size:20px">Run locally</text>
-<text x="232" y="275" class="small" >Start the editor,</text>
-<text x="232" y="300" class="small" >server + agent.</text>
-<circle cx="484" cy="123" r="17" fill="#94602f"/>
-<text x="484" y="129" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#ffffff">3</text>
-<rect x="400" y="154" width="168" height="166" rx="14" fill="#fff8ec" stroke="#e8d7b7" filter="url(#shadow)"/>
-<rect x="416" y="170" width="44" height="44" rx="11" fill="#f6e7ce" stroke="none" />
-<g transform="translate(421 175) scale(0.9)" fill="none" stroke="#94602f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 27 1-8L23 4a3 3 0 0 1 4 0l5 5a3 3 0 0 1 0 4L17 28l-10 3ZM20 7l9 9M8 20l8 8M5 34h27"/></g>
-<text x="416" y="244" class="name" style="font-size:20px">Add actions</text>
-<text x="416" y="275" class="small" >Highlight, run,</text>
-<text x="416" y="300" class="small" >suggest edits.</text>
-<circle cx="668" cy="123" r="17" fill="#22644d"/>
-<text x="668" y="129" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#ffffff">4</text>
-<rect x="584" y="154" width="168" height="166" rx="14" fill="#ffffff" stroke="#dbe6df" filter="url(#shadow)"/>
-<rect x="600" y="170" width="44" height="44" rx="11" fill="#eef5f0" stroke="none" />
-<g transform="translate(605 175) scale(0.9)" fill="none" stroke="#22644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10 3 3 6-7m5 4h13M4 21l3 3 6-7m5 4h13M4 32l3 3 6-7m5 4h13"/></g>
-<text x="600" y="244" class="name" style="font-size:20px">Test + explain</text>
-<text x="600" y="275" class="small" >Demo features.</text>
-<text x="600" y="300" class="small" >Check failures.</text>
-<circle cx="852" cy="123" r="17" fill="#22644d"/>
-<text x="852" y="129" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#ffffff">5</text>
-<rect x="768" y="154" width="168" height="166" rx="14" fill="#ffffff" stroke="#dbe6df" filter="url(#shadow)"/>
-<rect x="784" y="170" width="44" height="44" rx="11" fill="#eef5f0" stroke="none" />
-<g transform="translate(789 175) scale(0.9)" fill="none" stroke="#22644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="6" r="4"/><circle cx="9" cy="30" r="4"/><circle cx="28" cy="30" r="4"/><path d="M9 10v16M28 26V15a9 9 0 0 0-9-9h-1m4-4-4 4 4 4"/></g>
-<text x="784" y="244" class="name" style="font-size:20px">Open a PR</text>
-<text x="784" y="275" class="small" >solution → main</text>
-<text x="784" y="300" class="small" >Mark it ready.</text>
-<rect x="32" y="342" width="904" height="42" rx="11" fill="#f2f7f4" stroke="none" />
-<g transform="translate(49 352)" fill="none" stroke="#22644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="10"/><path d="m6 11 3 3 7-7"/></g>
-<text x="82" y="369" class="body" >The result: a local demo and a PR ready for review.</text>
+  <text x="100" y="92" class="number">01</text>
+  <rect x="28" y="112" width="144" height="96" rx="8" class="box"/>
+  <text x="100" y="151" class="name">Accept invite</text>
+  <text x="100" y="180" class="detail">Private repo</text>
+
+  <text x="290" y="92" class="number">02</text>
+  <rect x="218" y="112" width="144" height="96" rx="8" class="box"/>
+  <text x="290" y="151" class="name">Run locally</text>
+  <text x="290" y="180" class="detail">Start the app</text>
+
+  <text x="480" y="92" class="number">03</text>
+  <rect x="408" y="112" width="144" height="96" rx="8" class="box"/>
+  <text x="480" y="151" class="name">Add features</text>
+  <text x="480" y="180" class="detail">Three actions</text>
+
+  <text x="670" y="92" class="number">04</text>
+  <rect x="598" y="112" width="144" height="96" rx="8" class="box"/>
+  <text x="670" y="151" class="name">Check work</text>
+  <text x="670" y="180" class="detail">Demo + test</text>
+
+  <text x="860" y="92" class="number">05</text>
+  <rect x="788" y="112" width="144" height="96" rx="8" class="box"/>
+  <text x="860" y="151" class="name">Open PR</text>
+  <text x="860" y="180" class="detail">Ready for review</text>
+
+  <path d="M182 160H208" class="line"/>
+  <path d="M372 160H398" class="line"/>
+  <path d="M562 160H588" class="line"/>
+  <path d="M752 160H778" class="line"/>
 </svg>
