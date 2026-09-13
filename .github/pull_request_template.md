@@ -6,7 +6,7 @@ Who owns the editor state? How do actions refer to the correct code version?
 Where does code run, and how are edits accepted or rejected?
 
 ## Checks and limits
-What did you test? Include code changes during a response, out-of-order runs,
+What did you test? Include code changes during a response, runs that finish out of order,
 repeated actions, interruptions, and connection loss. Separate mock checks from
 real voice checks. What can still fail, and why?
 

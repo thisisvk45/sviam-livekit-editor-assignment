@@ -9,7 +9,7 @@ only for finding code and understanding the supplied baseline.
 | `src/components/Workspace.tsx` | Connects to LiveKit; shows messages and the captured code. |
 | `src/lib/protocol.ts` | Defines and checks messages and editor snapshots. |
 | `src/server/router.ts` | Creates a local room and a token to join it, through tRPC. |
-| `agent/main.ts` | Runs the agent, voice providers, and editor-reading requests. |
+| `agent/main.ts` | Runs the agent, voice providers, and requests to read the editor. |
 
 ## A turn through the code
 
@@ -29,7 +29,7 @@ OpenAI generates the reply, and ElevenLabs produces speech.
 
 - Each connection gets a room for one user and one agent. Input waits for agent readiness.
 - Snapshots are capped at 12 KB including JSON overhead. Requests accept only the assigned participants.
-- Editor state and transcript are not saved after a page reload. Text-turn deduplication resets if the agent restarts.
+- Editor state and transcript are not saved after a page reload. The agent forgets which text turns it has already handled if it restarts.
 - The browser shows at most 100 events. Provider conversation history grows during a session.
 - The local worker allows four rooms to accommodate reconnect cleanup. This is a local starter, not a production deployment.
 - Highlighting, running code, and edit proposals are deliberately left for you to implement.
