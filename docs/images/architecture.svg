@@ -1,62 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="572" viewBox="0 0 1040 572" role="img" aria-labelledby="title desc">
-  <title id="title">How the starter works</title>
-  <desc id="desc">The browser editor, local LiveKit server, and Node.js agent run on the candidate's laptop. LiveKit carries audio and code messages in both directions. For real voice, the agent uses team-funded Deepgram for speech to text, OpenAI for replies, and ElevenLabs for speech. No app deployment is needed.</desc>
-  <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#35634f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
-    <style>
-      text { font-family: Arial, Helvetica, sans-serif; fill: #22372d; }
-      .heading { font-size: 25px; font-weight: 700; }
-      .label { font-size: 16px; font-weight: 700; letter-spacing: 1px; }
-      .name { font-size: 23px; font-weight: 700; }
-      .body { font-size: 19px; }
-      .small { font-size: 17px; fill: #4a6255; }
-      .wire { fill: none; stroke: #35634f; stroke-width: 2; marker-start: url(#arrow); marker-end: url(#arrow); }
-    </style>
-  </defs>
-  <rect width="1040" height="572" rx="16" fill="#fff"/>
-  <text x="24" y="35" class="heading">The starter: code + conversation</text>
-  <rect x="24" y="60" width="992" height="274" rx="16" fill="#eff6f1" stroke="#c5d7ca"/>
-  <text x="48" y="94" class="label">ON YOUR LAPTOP</text>
-  <text x="992" y="94" class="small" text-anchor="end">No deployment needed</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="740" viewBox="0 0 960 740" role="img" aria-labelledby="title desc">
+<title id="title">How the starter works</title>
+<desc id="desc">Your browser editor, LiveKit server, and Node.js agent run on your laptop. LiveKit carries audio and code messages in both directions. You add highlighting, running code, and edit proposals. In voice mode the agent calls Deepgram, OpenAI, and ElevenLabs using keys supplied by the hiring team. No deployment is needed.</desc>
+<defs>
+  <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#173d2e" flood-opacity="0.055"/></filter>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 2 8 5 2 8" fill="none" stroke="#43836a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; fill: #183e30; }
+    .title { font-size: 32px; font-weight: 700; letter-spacing: -0.6px; }
+    .subtitle { font-size: 20px; fill: #52675d; }
+    .eyebrow { font-size: 15px; font-weight: 700; letter-spacing: 1.4px; }
+    .name { font-size: 23px; font-weight: 700; letter-spacing: -0.3px; }
+    .body { font-size: 19px; fill: #3c574a; }
+    .small { font-size: 18px; fill: #52675d; }
+    .chip { font-size: 18px; font-weight: 700; }
+    .wire { fill: none; stroke: #43836a; stroke-width: 2; marker-start: url(#arrow); marker-end: url(#arrow); }
+  </style>
+</defs>
+<rect x="1" y="1" width="958" height="738" rx="22" fill="#ffffff" stroke="#e0e7e2" />
 
-  <rect x="48" y="116" width="248" height="162" rx="12" fill="#fff" stroke="#c5d7ca"/>
-  <text x="172" y="152" class="name" text-anchor="middle">Your browser</text>
-  <text x="172" y="187" class="body" text-anchor="middle">Code editor</text>
-  <text x="172" y="214" class="body" text-anchor="middle">Microphone + speaker</text>
-  <text x="172" y="252" class="small" text-anchor="middle">Holds the current code</text>
-
-  <rect x="398" y="116" width="244" height="162" rx="12" fill="#fff" stroke="#c5d7ca"/>
-  <text x="520" y="152" class="name" text-anchor="middle">LiveKit server</text>
-  <text x="520" y="193" class="body" text-anchor="middle">Moves audio</text>
-  <text x="520" y="220" class="body" text-anchor="middle">and messages</text>
-  <text x="520" y="252" class="small" text-anchor="middle">Runs locally</text>
-
-  <rect x="744" y="116" width="248" height="162" rx="12" fill="#fff" stroke="#c5d7ca"/>
-  <text x="868" y="152" class="name" text-anchor="middle">Node.js agent</text>
-  <text x="868" y="187" class="body" text-anchor="middle">Reads this turn's code</text>
-  <text x="868" y="214" class="body" text-anchor="middle">and the user's words</text>
-  <text x="868" y="252" class="small" text-anchor="middle">Creates a reply</text>
-
-  <text x="347" y="179" class="small" text-anchor="middle">Audio</text>
-  <path d="M 306 194 H 388" class="wire"/>
-  <text x="347" y="228" class="small" text-anchor="middle">Code + text</text>
-  <path d="M 306 243 H 388" class="wire"/>
-  <text x="693" y="179" class="small" text-anchor="middle">Audio</text>
-  <path d="M 652 194 H 734" class="wire"/>
-  <text x="693" y="228" class="small" text-anchor="middle">Code + text</text>
-  <path d="M 652 243 H 734" class="wire"/>
-  <text x="48" y="311" class="small">You add: highlight code · run code · propose edits.</text>
-
-  <path d="M 868 283 V 385" class="wire"/>
-  <text x="48" y="369" class="body">Voice mode uses these online services.</text>
-  <text x="885" y="370" class="small">API keys</text>
-  <rect x="24" y="396" width="992" height="152" rx="16" fill="#fbf6eb" stroke="#e3d7be"/>
-  <text x="48" y="429" class="label">FUNDED ACCESS FROM THE HIRING TEAM</text>
-  <path d="M 348 450 V 524 M 684 450 V 524" stroke="#e3d7be"/>
-  <text x="48" y="470" class="name">Deepgram</text>
-  <text x="48" y="502" class="body">Speech → text</text>
-  <text x="380" y="470" class="name">OpenAI</text>
-  <text x="380" y="502" class="body">Text + code → reply</text>
-  <text x="716" y="470" class="name">ElevenLabs</text>
-  <text x="716" y="502" class="body">Reply → speech</text>
+<text x="32" y="51" class="title" >How the starter works</text>
+<text x="32" y="84" class="subtitle" >Your code and conversation, connected.</text>
+<rect x="737" y="28" width="191" height="36" rx="18" fill="#eff6f2" stroke="none" />
+<text x="832.5" y="52" class="chip" text-anchor="middle">No deployment</text>
+<rect x="24" y="112" width="912" height="350" rx="18" fill="#f2f7f4" stroke="#d5e3da" />
+<text x="44" y="146" class="eyebrow" >ON YOUR LAPTOP</text>
+<text x="916" y="146" class="small" text-anchor="end">Provided in the starter</text>
+<rect x="44" y="172" width="224" height="198" rx="16" fill="#ffffff" stroke="#dbe6df" filter="url(#shadow)"/>
+<rect x="64" y="190" width="48" height="48" rx="12" fill="#edf5ef" stroke="none" />
+<g transform="translate(70 196) scale(1)" fill="none" stroke="#22644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="30" height="27" rx="4"/><path d="M3 12h30M9 8h1m4 0h1M13 18l-4 4 4 4m10-8 4 4-4 4m-4-9-2 10"/></g>
+<text x="124" y="218" class="eyebrow" >BROWSER</text>
+<text x="64" y="273" class="name" >Code editor</text>
+<text x="64" y="306" class="body" >Write code. Talk.</text>
+<text x="64" y="344" class="small" >Keeps editor state</text>
+<rect x="368" y="172" width="224" height="198" rx="16" fill="#ffffff" stroke="#dbe6df" filter="url(#shadow)"/>
+<rect x="388" y="190" width="48" height="48" rx="12" fill="#edf5ef" stroke="none" />
+<g transform="translate(394 196) scale(1)" fill="none" stroke="#22644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="28" height="12" rx="4"/><rect x="4" y="21" width="28" height="12" rx="4"/><path d="M10 9h1m5 0h10M10 27h1m5 0h10M18 15v6"/></g>
+<text x="448" y="218" class="eyebrow" >CONNECTION</text>
+<text x="388" y="273" class="name" >LiveKit server</text>
+<text x="388" y="306" class="body" >Passes audio + code</text>
+<text x="388" y="344" class="small" >Connects both sides</text>
+<rect x="692" y="172" width="224" height="198" rx="16" fill="#ffffff" stroke="#dbe6df" filter="url(#shadow)"/>
+<rect x="712" y="190" width="48" height="48" rx="12" fill="#edf5ef" stroke="none" />
+<g transform="translate(718 196) scale(1)" fill="none" stroke="#22644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5h20a5 5 0 0 1 5 5v14a5 5 0 0 1-5 5H15l-8 5v-6a5 5 0 0 1-4-5V10a5 5 0 0 1 5-5Z"/><path d="m18 10 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z"/></g>
+<text x="772" y="218" class="eyebrow" >AGENT</text>
+<text x="712" y="273" class="name" >Node.js agent</text>
+<text x="712" y="306" class="body" >Reads code + words</text>
+<text x="712" y="344" class="small" >Builds the reply</text>
+<text x="318" y="248" class="small" text-anchor="middle">Audio</text>
+<path d="M278 264H358" class="wire"/>
+<text x="318" y="307" class="small" text-anchor="middle">Code + text</text>
+<path d="M278 323H358" class="wire"/>
+<text x="642" y="248" class="small" text-anchor="middle">Audio</text>
+<path d="M602 264H682" class="wire"/>
+<text x="642" y="307" class="small" text-anchor="middle">Code + text</text>
+<path d="M602 323H682" class="wire"/>
+<text x="44" y="424" class="eyebrow" >YOU ADD</text>
+<rect x="151" y="397" width="155" height="42" rx="11" fill="#fff6e9" stroke="#eddbc0" />
+<text x="228.5" y="424" class="chip" text-anchor="middle">Highlight</text>
+<rect x="318" y="397" width="155" height="42" rx="11" fill="#fff6e9" stroke="#eddbc0" />
+<text x="395.5" y="424" class="chip" text-anchor="middle">Run code</text>
+<rect x="485" y="397" width="190" height="42" rx="11" fill="#fff6e9" stroke="#eddbc0" />
+<text x="580.0" y="424" class="chip" text-anchor="middle">Suggest edits</text>
+<path d="M804 380V520" class="wire"/>
+<text x="820" y="498" class="small" >API calls</text>
+<text x="44" y="499" class="body" >Use the keys supplied by the hiring team.</text>
+<rect x="24" y="530" width="912" height="186" rx="18" fill="#fff8ec" stroke="#ebddc4" />
+<text x="44" y="564" class="eyebrow" >ONLINE · VOICE MODE ONLY</text>
+<rect x="44" y="584" width="272" height="108" rx="13" fill="#ffffff" stroke="#eee4d2" />
+<rect x="60" y="601" width="40" height="40" rx="10" fill="#faf1e2" stroke="none" />
+<g transform="translate(66 607) scale(0.78)" fill="none" stroke="#976634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 14v8m6-14v20m7-25v30m7-25v20m6-14v8"/></g>
+<text x="116" y="628" class="name" >Deepgram</text>
+<text x="64" y="670" class="body" >Speech → text</text>
+<rect x="344" y="584" width="272" height="108" rx="13" fill="#ffffff" stroke="#eee4d2" />
+<rect x="360" y="601" width="40" height="40" rx="10" fill="#faf1e2" stroke="none" />
+<g transform="translate(366 607) scale(0.78)" fill="none" stroke="#976634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 3 4 11 11 4-11 4-4 11-4-11-11-4 11-4Z"/></g>
+<text x="416" y="628" class="name" >OpenAI</text>
+<text x="364" y="670" class="body" >Text + code → reply</text>
+<rect x="644" y="584" width="272" height="108" rx="13" fill="#ffffff" stroke="#eee4d2" />
+<rect x="660" y="601" width="40" height="40" rx="10" fill="#faf1e2" stroke="none" />
+<g transform="translate(666 607) scale(0.78)" fill="none" stroke="#976634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13h7l9-8v26l-9-8H4ZM26 11a10 10 0 0 1 0 14m4-19a17 17 0 0 1 0 24"/></g>
+<text x="716" y="628" class="name" >ElevenLabs</text>
+<text x="664" y="670" class="body" >Reply → speech</text>
 </svg>
