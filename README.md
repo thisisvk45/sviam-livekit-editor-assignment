@@ -79,6 +79,8 @@ npm ci
 npm run setup
 ```
 
+Before changing the code, create your branch: `git switch -c solution`.
+
 Open three terminals in the repository folder. Keep these commands running:
 
 | Terminal | Command |
@@ -108,6 +110,8 @@ Your local agent uses that key through SViam's gateway for OpenAI, Deepgram,
 and ElevenLabs. Each service has its own balance and stops at its US$10 limit.
 Credits cannot move between services.
 You do not need provider accounts or a payment method.
+These are SViam-metered allowances for the supplied models and voice, not balances
+deposited into personal provider accounts. The pack lists the usage rates and limits.
 
 After checking mock mode, change this one line in the pack's `.env.local`:
 
@@ -119,9 +123,11 @@ Keep the supplied key, gateway URL, and voice ID unchanged. Restart the web app 
 reconnect, and click **Enable microphone**. Check your balance and deadline in
 the portal. The pack explains the usage rates. Downloading again does not reset
 credits or time. Paid access stops at the limit or expiry; mock mode remains available.
+After replacing a key, copy the new pack's `SVIAM_ASSIGNMENT_KEY`,
+`SVIAM_GATEWAY_URL`, and `ELEVEN_VOICE_ID` into your existing `.env.local`, then restart both processes.
 
 Never commit `.env.local` or share your pack. If activation is unavailable,
-contact the hiring team and use mock mode meanwhile. Using your own provider
+[contact the hiring team](mailto:vikas.kumar@sviam.in) and use mock mode meanwhile. Using your own provider
 keys is optional; the variable names are in `.env.example`.
 
 ## Submit

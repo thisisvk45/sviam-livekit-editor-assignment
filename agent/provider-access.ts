@@ -1,4 +1,10 @@
 /** The portal key stays in the local Node agent, never in the browser bundle. */
+export function voiceAccess(env: Record<string, string | undefined>) {
+  const providers = providerAccess(env);
+  if (!env.ELEVEN_VOICE_ID) throw new Error("Missing ELEVEN_VOICE_ID. Use the configuration from your starter pack.");
+  return { ...providers, voiceId: env.ELEVEN_VOICE_ID };
+}
+
 export function providerAccess(env: Record<string, string | undefined>) {
   const key = env.SVIAM_ASSIGNMENT_KEY;
   if (key) {

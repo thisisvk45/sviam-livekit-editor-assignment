@@ -2,7 +2,7 @@ import { cli, defineAgent, ServerOptions, voice, type JobContext, type llm } fro
 import { fileURLToPath } from "node:url";
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
-import { providerAccess } from "./provider-access";
+import { voiceAccess } from "./provider-access";
 import { EVENT_TOPIC, SNAPSHOT_RPC, TURN_RPC, QUESTION, mockReply, snapshotContext, snapshotSchema, turnSchema, type AgentEvent } from "../src/lib/protocol";
 
 const metadataSchema = z.object({ candidateIdentity: z.string().startsWith("candidate-"), mode: z.enum(["mock", "voice"]) });
@@ -29,8 +29,7 @@ export default defineAgent({
 
     let session: voice.AgentSession | undefined;
     if (metadata.mode === "voice") {
-      const access = providerAccess(process.env);
-      if (!process.env.ELEVEN_VOICE_ID) throw new Error("Missing ELEVEN_VOICE_ID. Use the configuration from your starter pack.");
+      const access = voiceAccess(process.env);
       const [openai, deepgram, elevenlabs, silero] = await Promise.all([
         import("@livekit/agents-plugin-openai"), import("@livekit/agents-plugin-deepgram"),
         import("@livekit/agents-plugin-elevenlabs"), import("@livekit/agents-plugin-silero"),
@@ -51,7 +50,7 @@ export default defineAgent({
         vad: await silero.VAD.load(),
         stt: new deepgram.STT({ ...access.deepgram, model: "nova-3", language: "en" }),
         llm: new openai.LLM({ ...access.openai, model: process.env.OPENAI_MODEL || "gpt-4.1-mini", maxCompletionTokens: 500 }),
-        tts: new elevenlabs.TTS({ ...access.elevenlabs, voiceId: process.env.ELEVEN_VOICE_ID, model: "eleven_flash_v2_5" }),
+        tts: new elevenlabs.TTS({ ...access.elevenlabs, voiceId: access.voiceId, model: "eleven_flash_v2_5" }),
         turnHandling: {
           turnDetection: "vad",
           interruption: { mode: "vad" },

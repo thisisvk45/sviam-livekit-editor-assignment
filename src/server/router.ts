@@ -2,6 +2,7 @@ import "server-only";
 import { initTRPC, TRPCError } from "@trpc/server";
 import { AccessToken, RoomServiceClient } from "livekit-server-sdk";
 import { randomUUID } from "node:crypto";
+import { voiceAccess } from "../../agent/provider-access";
 
 const t = initTRPC.create();
 export const appRouter = t.router({
@@ -15,8 +16,9 @@ export const appRouter = t.router({
     const secret = process.env.LIVEKIT_API_SECRET || "secret";
     const mode = process.env.AGENT_MODE || "mock";
     if (!["mock", "voice"].includes(mode)) throw new TRPCError({ code: "PRECONDITION_FAILED", message: "AGENT_MODE must be mock or voice." });
-    if (mode === "voice" && ["OPENAI_API_KEY", "DEEPGRAM_API_KEY", "ELEVEN_API_KEY", "ELEVEN_VOICE_ID"].some(name => !process.env[name])) {
-      throw new TRPCError({ code: "PRECONDITION_FAILED", message: "Voice access is not configured. Follow .env.example using the credentials provided by the hiring team." });
+    if (mode === "voice") {
+      try { voiceAccess(process.env); }
+      catch (error) { throw new TRPCError({ code: "PRECONDITION_FAILED", message: error instanceof Error ? error.message : "Download your starter pack to configure voice access." }); }
     }
     const identity = `candidate-${randomUUID()}`;
     const roomName = `assignment-${randomUUID()}`;
