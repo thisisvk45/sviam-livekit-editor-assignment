@@ -10,6 +10,7 @@ only for finding code and understanding the supplied baseline.
 | `src/lib/protocol.ts` | Defines and checks messages and editor snapshots. |
 | `src/server/router.ts` | Creates a local room and a token to join it, through tRPC. |
 | `agent/main.ts` | Runs the agent, voice providers, and requests to read the editor. |
+| `agent/provider-access.ts` | Routes a personal portal key through SViam's metered provider gateway. |
 
 ## A turn through the code
 
@@ -45,7 +46,6 @@ fresh editor revisions, disconnect, and reconnect, in mock mode. The UI was also
 visually inspected. That test used macOS, Node.js 20.19.6, and LiveKit 1.13.6;
 CI uses Node.js 22 on Linux. Native audio on other operating systems was not manually tested.
 
-**Team release check still pending:** funded provider access and a complete spoken
-conversation. Mock testing does not verify real speech, model replies, credentials,
-or voice interruptions. Key delivery and credit limits are managed separately by
-the hiring team; this repository does not provision them.
+The portal provisions personal access and enforces credits and expiry on its
+server. This repository consumes that access through the local agent. Mock tests
+do not verify real speech, provider credentials, or voice interruptions.

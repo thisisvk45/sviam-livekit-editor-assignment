@@ -9,7 +9,10 @@ try {
   check(true, ".env.local exists");
 } catch { check(false, ".env.local missing; run npm run setup"); }
 check(["mock", "voice"].includes(env.AGENT_MODE), "AGENT_MODE is mock or voice");
-if (env.AGENT_MODE === "voice") for (const name of ["OPENAI_API_KEY", "DEEPGRAM_API_KEY", "ELEVEN_API_KEY", "ELEVEN_VOICE_ID"]) check(Boolean(env[name]), `${name} is present (validity is not tested)`);
+if (env.AGENT_MODE === "voice") {
+  const required = env.SVIAM_ASSIGNMENT_KEY ? ["SVIAM_ASSIGNMENT_KEY", "SVIAM_GATEWAY_URL", "ELEVEN_VOICE_ID"] : ["OPENAI_API_KEY", "DEEPGRAM_API_KEY", "ELEVEN_API_KEY", "ELEVEN_VOICE_ID"];
+  for (const name of required) check(Boolean(env[name]), `${name} is present (validity is not tested)`);
+}
 else console.log("INFO Mock mode does not test microphone, transcription, LLM, or speech generation.");
 try {
   const url = new URL(env.LIVEKIT_URL || "ws://127.0.0.1:7880");

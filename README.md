@@ -8,7 +8,7 @@ This is a chance to show us how you build, test, and explain your work.
 
 **Already provided:** a TypeScript editor, voice connection, and an agent that can
 read the code and discuss it. **You build:** the three actions below.
-Everything you build runs on your laptop. No deployment, login, database, or LiveKit Cloud account is required.
+Everything you build runs on your laptop. No deployment, app authentication, database, or LiveKit Cloud account is required.
 
 [Local setup](#run-the-starter) · [API keys](#add-api-access) · [Submission](#submit)
 
@@ -43,9 +43,13 @@ the audio and messages between them. The app runs locally; voice providers need 
 
 ![Candidate steps: accept your private invitation, run the starter locally, build the three features, check them locally, and open a pull request.](docs/images/candidate-flow.svg)
 
-Accept your assigned repository invitation, clone it, and
-open its folder. Use Node.js 22 and install [LiveKit Server](https://docs.livekit.io/transport/self-hosting/local/)
-(`brew install livekit` on macOS). Then run:
+If your application portal offers a starter pack, connect GitHub, activate it,
+and download the ZIP. Accept your private repository invitation, extract the ZIP,
+and follow `START-HERE.txt`. It includes your personal access key and a setup script.
+
+Use Node.js 22, Git, and [LiveKit Server](https://docs.livekit.io/transport/self-hosting/local/)
+(`brew install livekit` on macOS). Without the setup pack, clone your assigned
+repository and run these commands in its folder:
 
 ```sh
 npm ci
@@ -73,29 +77,27 @@ If the connection fails, run `npm run doctor` and check that all three terminals
 
 ## Add API access
 
-For voice mode, ask your assignment contact for funded OpenAI, Deepgram, and
-ElevenLabs keys, plus an ElevenLabs voice ID. The team shares these privately;
-confirm your usage allowance and expiry with them.
+Your [application portal](https://sviam.in/apply/ai-intern/application) is where
+you activate and download access once the team invites you. The starter pack
+provides **one personal key and US$10 in assignment credits for five days**.
+Your local agent uses that key through SViam's gateway for OpenAI, Deepgram,
+and ElevenLabs. Model requests may use SViam's paid OpenRouter account.
+You do not need provider accounts or a payment method.
 
-Access is currently arranged manually. Accepting a GitHub invitation does not
-issue keys or credits. You do not need to buy credits, create provider accounts,
-or deploy anything. Mock mode works while you wait for access.
-
-`npm run setup` creates `.env.local`. Replace the following settings with the
-values from the team; keep the other settings as supplied:
+After checking mock mode, change this one line in the pack's `.env.local`:
 
 ```dotenv
 AGENT_MODE=voice
-OPENAI_API_KEY=replace-with-team-key
-DEEPGRAM_API_KEY=replace-with-team-key
-ELEVEN_API_KEY=replace-with-team-key
-ELEVEN_VOICE_ID=replace-with-team-voice-id
 ```
 
-Keep this file on your laptop; never put keys in a commit or PR. Restart the web
-app and agent, reconnect, and click **Enable microphone**. Voice mode uses the
-online providers for speech, transcript, and code context. If access fails, tell
-the team; you can still check the local connection in mock mode.
+Keep the supplied key, gateway URL, and voice ID unchanged. Restart the web app and agent,
+reconnect, and click **Enable microphone**. Check your balance and deadline in
+the portal. The pack explains the usage rates. Downloading again does not reset
+credits or time. Paid access stops at the limit or expiry; mock mode remains available.
+
+Never commit `.env.local` or share your pack. If activation is unavailable,
+contact the hiring team and use mock mode meanwhile. Using your own provider
+keys is optional; the variable names are in `.env.example`.
 
 ## Submit
 
@@ -111,7 +113,7 @@ npm run build
 - [ ] A `solution` → `main` PR is ready for review in **your assigned private repo**, with local demo steps.
 
 Keep `main` unchanged. No portal upload or merge is needed. Other candidates have
-no access; the owner and authorized reviewers can see your work. Use the deadline in your invitation.
+no access; the owner and authorized reviewers can see your work. Use the deadline shown in your application portal or invitation.
 
 ## How we review it
 
