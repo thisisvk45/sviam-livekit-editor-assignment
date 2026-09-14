@@ -73,10 +73,13 @@ If the connection fails, run `npm run doctor` and check that all three terminals
 
 ## Add API access
 
-The hiring team will share funded OpenAI,
-Deepgram, and ElevenLabs keys, plus an ElevenLabs voice ID, privately.
-If you have not received access instructions, contact the person who sent your assignment.
-You do not need to buy credits or use free tier accounts. GitHub does not issue these keys.
+For voice mode, ask your assignment contact for funded OpenAI, Deepgram, and
+ElevenLabs keys, plus an ElevenLabs voice ID. The team shares these privately;
+confirm your usage allowance and expiry with them.
+
+Access is currently arranged manually. Accepting a GitHub invitation does not
+issue keys or credits. You do not need to buy credits, create provider accounts,
+or deploy anything. Mock mode works while you wait for access.
 
 `npm run setup` creates `.env.local`. Replace the following settings with the
 values from the team; keep the other settings as supplied:
