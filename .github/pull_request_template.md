@@ -1,9 +1,12 @@
 ## Demo
-How do we run and try highlighting, code execution, and suggested edits locally?
+How do we run the local voice demo? Show highlighting while the agent speaks,
+direct replacement of two loops, and execution of the updated code.
 
 ## Design
-Who owns the editor state? How do actions refer to the correct code version?
-Where does code run, and how are edits accepted or rejected?
+Who owns the editor state? How do speech, highlights, edits, and run results refer
+to the correct code version? How does the agent learn that an edit actually applied?
+How do you avoid overwriting concurrent user edits? Where does code run, and how
+is it isolated from the web and agent processes?
 
 ## Checks and limits
 What did you test? Include code changes during a response, runs that finish out of order,

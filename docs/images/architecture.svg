@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
   <title id="title">How the starter works</title>
-  <desc id="desc">The browser editor, local LiveKit server, and Node.js agent run on your laptop. Audio and code messages travel through LiveKit. You add highlighting, running code, and suggested edits. A personal portal key connects the agent to SViam's metered gateway for Deepgram, the OpenAI model, and ElevenLabs. The pack provides ten dollars per provider, thirty dollars total, for five days. No deployment is required.</desc>
+  <desc id="desc">This GitHub take-home is separate from the Maya interview. The browser editor, local LiveKit server, and Node.js agent run on your laptop. The starter agent reads code. You add highlighting aligned with speech, direct code editing, and execution, keeping each action tied to the correct code version. A personal portal key connects the agent to SViam's metered gateway for Deepgram, OpenAI, and ElevenLabs. The pack provides ten dollars per provider, thirty dollars total, for five days. No deployment is required.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M2 2 8 5 2 8" fill="none" stroke="#737373" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -43,7 +43,7 @@
   <text x="648" y="188" class="detail" text-anchor="middle">Code + text</text>
   <path d="M588 202H708" class="line duplex"/>
 
-  <text x="48" y="269" class="detail">You add: highlight · run · suggest edits</text>
+  <text x="48" y="269" class="detail">You add: highlight while speaking · edit · run</text>
 
   <path d="M816 232V316H622" class="line duplex"/>
   <text x="690" y="294" class="detail">API calls</text>

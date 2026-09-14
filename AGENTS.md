@@ -1,6 +1,9 @@
 # Assignment repository
 
 Read README.md before changing code; it is the complete candidate brief. AI assistance is allowed.
+This GitHub take-home is separate from the Maya interview. Its three features are
+speech-aligned highlighting, direct code editing, and code execution. An edit request
+changes the editor directly; a suggestion-only or preview/Apply workflow is not the requirement.
 Do not implement features outside the assignment or change the review criteria.
 Do not add credentials, personal data, or production source to commits.
 

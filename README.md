@@ -4,7 +4,8 @@ Hi there,
 
 Thank you for completing your interview with Maya. We'd like to invite you to
 the next step in our hiring process: a practical coding assignment.
-This is a chance to show us how you build, test, and explain your work.
+This GitHub take-home is separate from the Maya interview. You will extend the
+AI agent in this starter codebase; you are not changing the Maya interview.
 
 **Already provided:** a TypeScript editor, voice connection, and an agent that can
 read the code and discuss it. **You build:** the three actions below.
@@ -16,26 +17,48 @@ Everything you build runs on your laptop. No deployment, app authentication, dat
 
 | You build | Example user request | What should happen |
 | --- | --- | --- |
-| **Highlight** | “Explain this function.” | The agent highlights the relevant lines while explaining. The user can clear the highlight. |
-| **Run** | “Run my code.” | Show running, success, errors, timeouts, and output. The agent discusses the actual result. |
-| **Suggest a code fix** | “Suggest a fix.” | Show the proposed change as a diff or before/after preview. Let the user apply it or keep their original code. Never change code without approval. |
+| **Highlight while speaking** | “Explain these loops.” | Highlight the actual code being discussed while the related explanation is spoken. Move the highlight as the explanation moves. Resolve lines from the current code, including after edits. |
+| **Edit code directly** | “Replace these two loops with a different implementation.” | The agent removes and replaces the relevant block in the editor, then explains the confirmed change. Support inserting, deleting, and replacing code, including whole blocks or functions. |
+| **Run and explain** | “Run the updated code.” | Execute the current code and show running, success, errors, timeouts, and output. The agent discusses the actual result for that version. |
 
-**The important edge case:** the user edits code while the agent is replying.
-A highlight or edit for the old code must not affect unrelated new code, and an
-old run result must not appear to describe the new version.
+The user's spoken or typed edit request should change the editor directly. A chat
+snippet or suggested diff alone is not enough; a separate preview/Apply step is
+not required. All three actions must work through a real voice conversation.
 
-Also handle late or duplicate messages, overlapping runs, repeated Apply clicks,
-interruptions, and failures.
+**Keep the conversation and editor in sync.** If the user types while the agent
+responds, an old highlight or edit must not target unrelated new code. Refresh or
+resolve changed targets before acting; do not overwrite newer work with a stale
+replacement. After an edit, use the updated code for the next explanation and run.
+The agent must wait for action results before claiming an edit or run succeeded.
+
+Handle late or duplicate actions, overlapping runs, speech interruptions, and
+connection failures. Old run results must remain associated with the code they ran.
 Run editor code in an isolated environment with time and resource limits, outside the web or agent process.
 
 Supporting TypeScript/JavaScript is enough; solving the sample two sum problem is not the assignment.
 You may restructure the starter. Explain your choices.
 
+## Show this in your local demo
+
+1. Put a two-loop implementation in the editor and ask the agent to explain it.
+   The relevant lines should be highlighted as it speaks.
+2. Add lines above the loops and ask again. The highlight must follow the code,
+   not fixed line numbers.
+3. Ask it to replace both loops with a different implementation. Show the code
+   changing directly, then ask it to explain and highlight the new code.
+4. Ask it to run the updated code and discuss the output. Also show what happens
+   when the user edits during a response or run, or interrupts the agent.
+
+Use these as behavior checks, not a hardcoded demo. The actions should work on
+other TypeScript/JavaScript code in the editor too.
+
 ## How the starter works
 
 The browser holds the code. When the user finishes speaking, the agent asks for a
 fresh copy before replying. Typed questions work the same way. LiveKit carries
-the audio and messages between them. The app runs locally; voice providers need internet access.
+the audio and messages between them. A captured copy does not track later edits;
+you build the action handling and keep it in sync. The app runs locally; voice
+providers need internet access.
 
 ![Architecture: the browser, LiveKit server, and Node.js agent run locally. The agent uses Deepgram, OpenAI, and ElevenLabs online for voice.](docs/images/architecture.svg)
 
@@ -110,7 +133,7 @@ npm run check
 npm run build
 ```
 
-- [ ] Highlighting, code runs, and code-fix previews with user-approved changes work in a local demo.
+- [ ] Speech-aligned highlighting, direct code replacement, and code execution work in a local voice demo.
 - [ ] The PR explains your architecture, tests, failure cases, limitations, and how you checked code generated by AI.
 - [ ] A `solution` → `main` PR is ready for review in **your assigned private repo**, with local demo steps.
 
@@ -119,8 +142,9 @@ no access; the owner and authorized reviewers can see your work. Use the deadlin
 
 ## How we review it
 
-We assess the features, state handling, execution isolation, and your ability to
-explain the architecture. AI coding tools are fully allowed. We do not score the
+We assess the three features, speech/action coordination, state handling,
+execution isolation, and your ability to explain the architecture. AI coding tools
+are fully allowed. We do not score the
 default model's intelligence or factual accuracy, your choice of coding assistant,
 provider speech/transcription quality or latency outside your control, or visual
 polish beyond usability. We do assess how your app handles provider outputs and errors.

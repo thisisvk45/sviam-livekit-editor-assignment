@@ -1,7 +1,8 @@
 # Optional implementation notes
 
 The [README](../README.md) contains the complete candidate brief. These notes are
-only for finding code and understanding the supplied baseline.
+only for finding code and understanding the supplied baseline. This is the agent
+for the GitHub take-home assignment, separate from the Maya interview.
 
 | File | What it does |
 | --- | --- |
@@ -26,6 +27,23 @@ Audio travels over WebRTC; snapshots and text travel over LiveKit RPC/text strea
 tRPC only sets up the session. Silero detects speech locally; Deepgram transcribes,
 OpenAI generates the reply, and ElevenLabs produces speech.
 
+## What your implementation adds
+
+The snapshot is a point-in-time copy, not a live view. Extend the starter so the
+agent can highlight the code it is speaking about, directly change the editor in
+response to a user request, and execute code with results returned to the agent.
+Update the agent's read-only instructions when those actions are implemented.
+
+Choose your own architecture and explain these decisions in your PR:
+
+- How do actions identify their document, code version, and target range?
+- How do highlights follow the spoken explanation, including after code changes
+  or speech interruption?
+- How do edits insert, delete, or replace an entire block without overwriting
+  concurrent user changes? How are success, failure, and duplicate delivery handled?
+- How do execution results identify the code that ran, even if a newer run or edit
+  finishes first? How are execution time and resources bounded?
+
 ## Limits to know
 
 - Each connection gets a room for one user and one agent. Input waits for agent readiness.
@@ -33,7 +51,7 @@ OpenAI generates the reply, and ElevenLabs produces speech.
 - Editor state and transcript are not saved after a page reload. The agent forgets which text turns it has already handled if it restarts.
 - The browser shows at most 100 events. Provider conversation history grows during a session.
 - The local worker allows four rooms to accommodate reconnect cleanup. This is a local starter, not a production deployment.
-- Highlighting, running code, and edit proposals are deliberately left for you to implement.
+- Dynamic highlighting, direct code editing, and execution are deliberately left for you to implement.
 
 ## Verification and troubleshooting
 
