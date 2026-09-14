@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
   <title id="title">How the starter works</title>
-  <desc id="desc">The browser editor, local LiveKit server, and Node.js agent run on your laptop. Audio and code messages travel through LiveKit. You add highlighting, running code, and suggested edits. For voice, the agent calls Deepgram, OpenAI, and ElevenLabs using keys from the hiring team. No deployment is required.</desc>
+  <desc id="desc">The browser editor, local LiveKit server, and Node.js agent run on your laptop. Audio and code messages travel through LiveKit. You add highlighting, running code, and suggested edits. A personal portal key connects the agent to SViam's metered gateway for Deepgram, the OpenAI model, and ElevenLabs. The pack provides ten dollars for five days. No deployment is required.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M2 2 8 5 2 8" fill="none" stroke="#737373" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -45,10 +45,14 @@
 
   <text x="48" y="269" class="detail">You add: highlight · run · suggest edits</text>
 
-  <path d="M816 232V308H480V370" class="line" marker-start="url(#arrow)"/>
+  <path d="M816 232V316H622" class="line duplex"/>
   <text x="690" y="294" class="detail">API calls</text>
+  <rect x="350" y="284" width="260" height="68" rx="8" class="box"/>
+  <text x="480" y="313" class="section" text-anchor="middle">SViam API access</text>
+  <text x="480" y="339" class="detail" text-anchor="middle">US$10 · five days</text>
+  <path d="M480 352V370" class="line"/>
   <text x="48" y="345" class="section">Online voice APIs</text>
-  <text x="912" y="345" class="detail" text-anchor="end">Keys from the team</text>
+  <text x="912" y="345" class="detail" text-anchor="end">One personal key</text>
   <path d="M144 370H816" class="line"/>
   <circle cx="480" cy="370" r="2.5" fill="#737373"/>
   <path d="M144 370V394" class="line" marker-end="url(#arrow)"/>

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="244" viewBox="0 0 960 244" role="img" aria-labelledby="title desc">
   <title id="title">Your steps</title>
-  <desc id="desc">Accept your private repository invitation, run the starter locally, add the three features, demo and test them, then open a pull request ready for review. The work and demo run locally.</desc>
+  <desc id="desc">Activate and download your setup pack in the portal, accept the private GitHub invitation, run the starter locally, add the three features, demo and test them, then open a pull request ready for review. The work and demo run locally.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
       <path d="M2 2 8 5 2 8" fill="none" stroke="#737373" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -22,8 +22,8 @@
 
   <text x="100" y="92" class="number">01</text>
   <rect x="28" y="112" width="144" height="96" rx="8" class="box"/>
-  <text x="100" y="151" class="name">Accept invite</text>
-  <text x="100" y="180" class="detail">Private repo</text>
+  <text x="100" y="151" class="name">Get setup pack</text>
+  <text x="100" y="180" class="detail">Portal + GitHub</text>
 
   <text x="290" y="92" class="number">02</text>
   <rect x="218" y="112" width="144" height="96" rx="8" class="box"/>
