@@ -11,10 +11,50 @@ export const snapshotSchema = z.object({
   "The editor snapshot must fit within 12 KB for LiveKit RPC.");
 export type EditorSnapshot = z.infer<typeof snapshotSchema>;
 export const turnSchema = z.object({ id: z.string().uuid(), text: z.string().trim().min(1).max(2000) }).strict();
-export const eventSchema = z.discriminatedUnion("kind", [
+/*export const eventSchema = z.discriminatedUnion("kind", [
   z.object({ kind: z.literal("context"), id: z.string(), snapshot: snapshotSchema }),
   z.object({ kind: z.literal("transcript"), id: z.string(), role: z.enum(["user", "agent"]), text: z.string() }),
   z.object({ kind: z.literal("error"), id: z.string(), text: z.string() }),
+]);*/
+export const eventSchema = z.discriminatedUnion("kind", [
+  z.object({
+    kind: z.literal("context"),
+    id: z.string(),
+    snapshot: snapshotSchema,
+  }),
+
+  z.object({
+    kind: z.literal("transcript"),
+    id: z.string(),
+    role: z.enum(["user", "agent"]),
+    text: z.string(),
+  }),
+
+  z.object({
+    kind: z.literal("highlight"),
+    id: z.string(),
+    startLine: z.number().int().nonnegative(),
+    endLine: z.number().int().nonnegative(),
+  }),
+
+  z.object({
+    kind: z.literal("edit"),
+    id: z.string(),
+    code: z.string().max(8000),
+  }),
+
+  z.object({
+    kind: z.literal("run"),
+    id: z.string(),
+    output: z.string(),
+    success: z.boolean(),
+  }),
+
+  z.object({
+    kind: z.literal("error"),
+    id: z.string(),
+    text: z.string(),
+  }),
 ]);
 export type AgentEvent = z.infer<typeof eventSchema>;
 export const QUESTION = "Implement twoSum(nums, target), returning the indices of two distinct entries whose sum is target, or null if no pair exists. Example: twoSum([2, 7, 11, 15], 9) returns [0, 1].";
